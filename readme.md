@@ -16,3 +16,9 @@ ROTA
    por exemplo: function (req, res), essa requisição nem sempre vai ter um VALOR.
 
    res.send() - é a nossa resposta, é como se fosse o nosso 'print()'.
+
+STATUS
+400 - bed request 
+201 - created sucess
+
+res.status(400).send({message :"Submit all fields for regsitration"})
