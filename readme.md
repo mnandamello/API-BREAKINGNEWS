@@ -22,3 +22,5 @@ STATUS
 201 - created sucess
 
 res.status(400).send({message :"Submit all fields for regsitration"})
+
+ROTAS -> CONTROLLER -> SERVICE -> BANCO.
