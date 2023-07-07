@@ -2,7 +2,7 @@ const express = require("express"); //aqui ele esta chamando todos os pacotes do
 const app = express(); //essa é a nossa variavel principal
 const connectDatabase = require("./src/database/db");
 
-const userRouter = require("./src/routes/user.route");
+const userRouter = require("./src/routes/user.route");//aqui é o modulo de rotas
 
 const port = 3000;
 

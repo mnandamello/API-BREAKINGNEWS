@@ -24,3 +24,31 @@ STATUS
 res.status(400).send({message :"Submit all fields for regsitration"})
 
 ROTAS -> CONTROLLER -> SERVICE -> BANCO.
+
+FUNÇÃO FIND BY ID
+  //como tinha feito antes
+  const id = req.params.id; //aqui estamos pedindo o id como req.
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {//aqui é nativo do mongoose para conferir e testar id's q chegam por parametro
+    return res.status(400).send({ message: "Invalid ID" });
+  }
+
+  const user = await userService.findByIdService(id); //aqui estou buscando o id.
+
+  if (!user) {
+    return res.status(400).send({ message: "User not found" });
+  } 
+
+FUNÇÃO UPDATE
+  //como tinha feito antes
+  const id = req.params.id;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).send({ message: "Invalid ID" });
+    }
+
+  const user = await userService.findByIdService(id);
+
+  if (!user) {
+    return res.status(400).send({ message: "User not found" });
+  } 
