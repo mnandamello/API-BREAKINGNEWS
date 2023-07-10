@@ -1,4 +1,4 @@
-const User = require("../models/User"); //aqui é a referencia do banco, onde ele vai cadastrar
+import User from "../models/User.js"; //aqui é a referencia do banco, onde ele vai cadastrar^
 
 const createService = (body) => User.create(body); //aqui ele esta pegando as infos do body ficticio e ta falando q são as mesmas infos que vai ir pro banco de dados, o create é um metodo do mongoose que cria um novo item dentro do Schema naquele padrão.
 
@@ -13,7 +13,7 @@ const updateService = (id, name, username, email, avatar, background) =>
   );
 
 
-module.exports = {
+export default {
   createService,
   findAllService,
   findByIdService,

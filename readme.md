@@ -1,8 +1,8 @@
-##EXPLICANDO O GET
+#  EXPLICANDO O GET
 -O .get é o metodo HTTP (função) de pegar algo, ou seja é a resposta q vou dar para o usuário, depois da função get tem uma função de callback, q é uma função sendo executada 'atrás' de outra.
 app.get('/', function (req, res){}
 
-ROTA
+# ROTA
    Method HTTP - CRUD (CREAT, READ, UPDATE, DELETE)
      GET - Pega uma info
      POST - Cria uma info
@@ -17,7 +17,7 @@ ROTA
 
    res.send() - é a nossa resposta, é como se fosse o nosso 'print()'.
 
-STATUS
+# STATUS
 400 - bed request 
 201 - created sucess
 
