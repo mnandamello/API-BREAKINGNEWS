@@ -52,3 +52,7 @@ FUNÇÃO UPDATE
   if (!user) {
     return res.status(400).send({ message: "User not found" });
   } 
+
+  -O arquivo .env é para criarmos variáveis de ambiente para esconder informações sensiveis, como a url do banco,
+  pois continha o usario e senha, então criamos essa variavel.
+    -O dotenv é um pacote do próprio node.
