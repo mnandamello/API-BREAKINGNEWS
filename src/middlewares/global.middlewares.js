@@ -1,7 +1,6 @@
 import mongoose from "mongoose"
 import userService from "../services/user.service.js";
 
-
 //vendo se o ID é válido
 export const validId = (req, res, next) => {
   try{const id = req.params.id;
