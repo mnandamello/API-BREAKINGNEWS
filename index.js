@@ -2,7 +2,7 @@ import express from "express";//aqui ele esta chamando todos os pacotes do node_
 import connectDatabase from "./src/database/db.js";
 import dotenv from "dotenv";
 
-import userRoute from "./src/routes/user.route.js";//aqui é o modulo de rotas
+import userRoute from "./src/routes/user.route.js";//aqui é o modulo de rotas do usuário
 import authRoute from "./src/routes/auth.route.js";
 
 dotenv.config();
