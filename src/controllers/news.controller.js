@@ -1,7 +1,9 @@
 import newsService from "../services/news.service.js";
 
+
 const create = async (req, res) => {
   try{
+
     const { title, text, banner } = req.body;
 
     if (!title || !text || !banner) {
@@ -12,10 +14,10 @@ const create = async (req, res) => {
       title,
       text,
       banner, 
-      id: "objectidfake"
+      user: req.userId
     })
 
-    res.send(news)
+    res.send({message: "News created"})
 
 
   }catch (err) {
@@ -25,7 +27,13 @@ const create = async (req, res) => {
 
 const findAll = async (req,res) => {
   try{
-    const news = []
+    const news = await newsService.findAllService();
+
+    if (news.lenght === 0) {
+      return res.status(400).send({ message: "There are not registered news" });
+    } 
+
+
     res.send(news)
   }catch (err) {
     res.status(500).send(err.message);

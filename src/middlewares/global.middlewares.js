@@ -13,7 +13,7 @@ export const validId = (req, res, next) => {
   } catch (err) {
     res.status(500).send({message: err.message})
   }
-};
+}; 
 
 
 //vendo se tem usuario
@@ -34,4 +34,5 @@ export const validUser = async (req, res, next) => {
     res.status(500).send({message: err.message})
   }
 };
+
 
