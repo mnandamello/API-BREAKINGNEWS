@@ -3,7 +3,6 @@ import userService from "../services/user.service.js";
 import Jwt from "jsonwebtoken";
 
 
-
 dotenv.config();
 
 export const authMiddleware = (req, res, next) => {
